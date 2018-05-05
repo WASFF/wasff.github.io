@@ -19,7 +19,7 @@
 	 		{% for item in site.static_files %}
 				{% if item.path contains pathlim %}
 					<li>
-						<a href="{{ site.url }}{{ item.path }}"> "{{ item.basename}}"></a>
+						<a href="{{ site.url }}{{ item.path }}"> {{ item.basename }} </a>
 					</li>
 					{% endif %}
 			{% endfor %}
