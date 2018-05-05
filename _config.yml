@@ -1,5 +1,13 @@
 theme: jekyll-theme-minimal
 
 collections:
- - minutes:
-     output: true
+    minutesindexs:
+        output: true
+
+defaults:
+    - scope:
+        path: ""
+        type: minutesindexs
+      values:
+        layout: minutesindex
+

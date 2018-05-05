@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+		<header>
+		</header>
+	
+		<div class="content">
+			{{ content }}
+		</div>
+
+		<div class="content">
+			<h2>{{ page.title }} Minutes</h2>
+			{% assign pathlim = 'minutes/' | append: page.title %}
+	 		{% for item in site.static_files %}
+				{% if item.path contains pathlim %}
+					<li>
+						<a href="{{ site.url }}{{ item.path }}"> "{{ item.basename}}"></a>
+					</li>
+					{% endif %}
+			{% endfor %}
+		</div>
+		<footer>
+		</footer>
+	</body>
+</html>
+
