@@ -18,6 +18,4 @@ description: Github Pages Demonstration
     {% endunless %}  
   {% endfor %}
         
-</ul>
-</div>
 
